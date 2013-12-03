@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ * Title: webstat_change_perms.py plugin. Fix permissions for webstat.
+ * Author: Andrey Scopenco
+-->
+
+<mgrdata>
+    <plugin>
+        <name lang="en">Change permissions for webstat</name>
+        <description lang="en">There is a bug in ISPmanager with scheme where nginx and apache+itk/suexec is used. Webstat is not accesible because config files passwd and .htaccess are created with wrong permissions. This plugin fixes the problem.</description>
+        <url>http://scopenco.net</url>
+        <version>0.1</version>
+        <lang>python</lang>
+        <author>Andrey Scopenco</author>
+        <site>https://github.com/scopenco/isp-plugin-webstat</site>
+        <contact>skype: scopenco; email:andrey@scopenco.net</contact>
+    </plugin>
+
+        <handler name="webstat_change_perms.py" type="cgi">
+                <event after="yes">wwwdomain.edit</event>
+        </handler>
+</mgrdata>
