@@ -3,6 +3,8 @@ isp-plugin-webstat
 
 Documentation
 --------
+Russian description at http://blog.scopenco.net/ispmanager-plugin-webstat-403-forbidded/
+
 There is a bug in ISPmanager with scheme where nginx+apache+itk/suexec is used. Webstat is not accesible because config files passwd and .htaccess are created with wrong permissions. This plugin fixes the problem.
 
 Installing
