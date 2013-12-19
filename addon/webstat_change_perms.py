@@ -114,7 +114,12 @@ if __name__ == "__main__":
         if not user:
             raise Exception('cant set user')
 
-        pw_user = getpwnam(user)
+        try:
+            pw_user = getpwnam(user)
+        except KeyError:
+            print xml_doc()                                                                                                                                                           
+            raise ExitOk('user not found')
+
         pw_apache = getpwnam('apache')
         log.write('user %s has uid %s' % (user, pw_user.pw_uid))
 
